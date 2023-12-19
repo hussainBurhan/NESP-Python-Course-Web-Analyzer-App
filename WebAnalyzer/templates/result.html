@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(233, 205, 47);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: orangered;
+            padding: 5px 5px;
+        }
+        h3{
+            text-align: center;
+            color: blue;
+        }
+        p{
+            text-align: center;
+            color: green;
+            font-size: 20px;
+        }
+        h2{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <br><br>
+    <h1>Web Analyzer App</h1>
+    <br><br>
+    <h3>This article has {{word_count}} words</h3>
+    <br><br>
+    <h2>Word Frequency</h2>
+    <br>
+    {% for word, num in frequency %}
+    <p>{{word}} : {{num}}</p>
+    {% endfor %}
+</body>
+</html>
