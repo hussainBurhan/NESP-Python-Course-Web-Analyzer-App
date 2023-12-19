@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Styling for the HTML page -->
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+        body {
             background-color: rgb(233, 205, 47);
             font-family: Arial, Helvetica, sans-serif;
         }
-        h1{
+        h1 {
             text-align: center;
             color: orangered;
         }
-        form{
+        form {
             text-align: center;
         }
-        input{
+        input {
             font-size: 20px;
             background-color: rgb(0, 255, 106);
             border-radius: 5px;
@@ -33,14 +34,17 @@
 </head>
 <body>
     <br><br>
+    <!-- Heading for the web analyzer app -->
     <h1>Web Analyzer App</h1>
     <br><br>
+    <!-- Form for user input with action pointing to the 'result' URL -->
     <form action="{% url 'result' %}">
         {% csrf_token %}
+        <!-- Textarea for users to enter the article -->
         <textarea name="article" id="" cols="60" rows="20">Enter your article here...</textarea>
         <br><br>
+        <!-- Submit button to submit the form -->
         <input type="submit" value="Submit">
     </form>
-
 </body>
 </html>
